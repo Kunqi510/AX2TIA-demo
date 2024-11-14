@@ -1,0 +1,14 @@
+{S7Lib_TIAXVersion := "2.1.0"}
+NAMESPACE ControlModule.ValveA
+    {S7Lib_Version := "0.0.1"}
+    {S7_Slot16 := "0"}
+    {S7Lib_Usage := "[]"}
+    {S7Lib_Access := "(Step7 := Hidden)"}
+    FUNCTION GetPos : INT
+        VAR_IN_OUT
+            {S7_Pointer := "4"}
+            {S7Lib_NeededVersion := "0.0.1"}
+            _this : ControlModule.ValveA.ClassFB;
+        END_VAR
+    END_FUNCTION
+END_NAMESPACE

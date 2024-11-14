@@ -1,0 +1,19 @@
+{S7Lib_TIAXVersion := "2.1.0"}
+NAMESPACE ControlModule.IValve
+    {S7Lib_Version := "0.0.1"}
+    {S7_Bit := "0"}
+    {S7Lib_Usage := "[]"}
+    {S7Lib_Access := "(Step7 := Hidden)"}
+    FUNCTION SetOutput : BOOL
+        VAR_IN_OUT
+            {S7_Pointer := "4"}
+            _this : ControlModule.IValve.ItfType;
+        END_VAR
+        VAR_OUTPUT
+            {S7_Bit := "1"}
+            goToHome : BOOL;
+            {S7_Bit := "2"}
+            goToWork : BOOL;
+        END_VAR
+    END_FUNCTION
+END_NAMESPACE

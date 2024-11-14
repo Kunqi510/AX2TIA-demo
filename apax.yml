@@ -1,28 +1,33 @@
-# General information
-name: "control-lib"
+name: "@fa_sup_cn/control-module"
 version: 0.0.1
 type: lib
 keywords:
   - library
-author: <Name>
-# Description will be displayed in the apax extension
-description: <Description for your library>
-# Targets to be compiled with 'apax build'
 targets:
   - "1500"
   - llvm
-# Install settings
-installStrategy: strict
-apaxVersion: 3.2.1
-# Dependencies
-devDependencies:
-  "@ax/sdk": 2405.0.0
-
-# Environment variables
-variables:
-  APAX_BUILD_ARGS:
-    - "--debug" # Generate debug information for target "1500"
-
-# Files, which will be shipped with the library
+  # - plcsim
+  # variables:
+  #   APAX_BUILD_ARGS:
+  #     - "--debug" # Generate debug information for target "1500"
 files:
   - bin
+  - README.md
+  - src
+variables:
+  PATH_NAME: "./bin/handover-folder"
+  TIA_GLOBAL_LIB_PATH: "./bin/TIAPortalLibrary"
+  TIA_INSTALL_PATH: "C:\\Program Files\\Siemens\\Automation\\Portal V19"
+
+scripts:
+  export-tialib: apax ax2tia -i ./bin/1500/fa_sup_cn-control-module.lib -o "$PATH_NAME"
+  import-tialib: '"$TIA_INSTALL_PATH\\bin\\Siemens.Simatic.Lang.Library.Importer.exe" -i "$PATH_NAME" -o "$TIA_GLOBAL_LIB_PATH"'
+devDependencies:
+  "@ax/sdk": ^2311.0.1
+  # "@ax/sdk": 4.0.12
+dependencies:
+  "@ax/system-timer": ^6.0.94
+  "@ax/system-edgedetection": ^6.0.94
+  "@ax/ax2tia": ^9.0.26
+installStrategy: overridable
+apaxVersion: 3.1.0

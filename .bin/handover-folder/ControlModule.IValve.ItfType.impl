@@ -1,0 +1,20 @@
+{S7Lib_TIAXVersion := "2.1.0"}
+NAMESPACE ControlModule.IValve
+    TYPE
+        {S7Lib_Version := "0.0.1"}
+        {S7_OptimizedPaddedBitSize := "96"}
+        {S7Lib_Usage := "[]"}
+        {S7Lib_Access := "(Step7 := Hidden)"}
+        ItfType : STRUCT
+            {S7_OptimizedPaddedBitSize := "32"}
+            {S7_OptimizedBitOffset := "0"}
+            Φtypecode : DWORD;
+            {S7_OptimizedPaddedBitSize := "32"}
+            {S7_OptimizedBitOffset := "32"}
+            baseOffset : DWORD;
+            {S7_OptimizedPaddedBitSize := "32"}
+            {S7_OptimizedBitOffset := "64"}
+            descriptorOffset : DWORD;
+        END_STRUCT;
+    END_TYPE
+END_NAMESPACE

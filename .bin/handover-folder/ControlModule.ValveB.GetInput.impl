@@ -1,0 +1,20 @@
+{S7Lib_TIAXVersion := "2.1.0"}
+NAMESPACE ControlModule.ValveB
+    {S7Lib_Version := "0.0.1"}
+    {S7_Bit := "0"}
+    {S7Lib_Usage := "[]"}
+    {S7Lib_Access := "(Step7 := Hidden)"}
+    FUNCTION GetInput : BOOL
+        VAR_IN_OUT
+            {S7_Pointer := "4"}
+            {S7Lib_NeededVersion := "0.0.1"}
+            _this : ControlModule.ValveB.ClassFB;
+        END_VAR
+        VAR_INPUT
+            {S7_Bit := "1"}
+            inHomePos : BOOL;
+            {S7_Bit := "2"}
+            inWorkPos : BOOL;
+        END_VAR
+    END_FUNCTION
+END_NAMESPACE

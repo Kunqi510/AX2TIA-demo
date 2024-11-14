@@ -1,25 +1,16 @@
-USING AxUnit;
-USING MyLibrary;
+ USING AxUnit;
 
-NAMESPACE MyTest
+ NAMESPACE TestControlModule
 
     {TestFixture}
-    CLASS MyTestFixture
-
-        VAR PROTECTED
-            testInstance : MyClass;
-        END_VAR
-
+    CLASS TestValve       
         {Test}
-        METHOD PUBLIC MyTestMethod
+        METHOD PUBLIC TestClose
             VAR_TEMP
-                result : BOOL;
+                resultGoToHome : BOOL;
+                resultGoToWork : BOOL;
             END_VAR
-
-            result := testInstance.MyMethod();
-
-            Assert.Equal(actual := result, expected := FALSE);
-        
+            Assert.Equal(actual := resultGoToHome, expected := TRUE);
         END_METHOD
     END_CLASS
 

@@ -1,0 +1,35 @@
+{S7Lib_TIAXVersion := "2.1.0"}
+NAMESPACE ControlModule.ValveB
+    {S7_OptimizedPaddedBitSize := "224"}
+    {S7Lib_Version := "0.0.1"}
+    {S7Lib_Usage := "[]"}
+    {S7Lib_Access := "(Step7 := Hidden)"}
+    FUNCTION_BLOCK ClassFB
+        VAR
+            {S7_OptimizedPaddedBitSize := "96"}
+            {S7_OptimizedBitOffset := "0"}
+            {S7Lib_Access := "(Internal := Hidden, External := Hidden)"}
+            Φcd : ARRAY [0..11] OF BYTE;
+            {S7_OptimizedPaddedBitSize := "96"}
+            {S7_OptimizedBitOffset := "96"}
+            {S7Lib_Access := "(Internal := Hidden, External := Hidden)"}
+            ΦiDesc_ControlModuleΦIValve : ARRAY [0..2] OF DWORD := [0, 96, 512];
+            {S7_OptimizedPaddedBitSize := "8"}
+            {S7_OptimizedBitOffset := "192"}
+            {S7Lib_Access := "(External := Hidden , Internal := ReadOnly)"}
+            _inHomePos : BOOL;
+            {S7_OptimizedPaddedBitSize := "8"}
+            {S7_OptimizedBitOffset := "200"}
+            {S7Lib_Access := "(External := Hidden , Internal := ReadOnly)"}
+            _inWorkPos : BOOL;
+            {S7_OptimizedPaddedBitSize := "8"}
+            {S7_OptimizedBitOffset := "208"}
+            {S7Lib_Access := "(External := Hidden , Internal := ReadOnly)"}
+            _goToHome : BOOL;
+            {S7_OptimizedPaddedBitSize := "8"}
+            {S7_OptimizedBitOffset := "216"}
+            {S7Lib_Access := "(External := Hidden , Internal := ReadOnly)"}
+            _goToWork : BOOL;
+        END_VAR
+    END_FUNCTION_BLOCK
+END_NAMESPACE

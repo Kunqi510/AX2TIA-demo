@@ -1,0 +1,16 @@
+{S7Lib_TIAXVersion := "2.1.0"}
+NAMESPACE ControlModule
+    {S7Lib_Version := "0.0.1"}
+    {S7Lib_Usage := "[]"}
+    {S7Lib_Access := "(Step7 := Hidden)"}
+    FUNCTION ValveAΦcopy : VOID
+        VAR_IN_OUT
+            {S7_Pointer := "4"}
+            {S7Lib_NeededVersion := "0.0.1"}
+            source : ControlModule.ValveA.ClassFB;
+            {S7_Pointer := "7"}
+            {S7Lib_NeededVersion := "0.0.1"}
+            target : ControlModule.ValveA.ClassFB;
+        END_VAR
+    END_FUNCTION
+END_NAMESPACE
