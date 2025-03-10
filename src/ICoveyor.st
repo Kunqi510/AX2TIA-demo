@@ -6,7 +6,7 @@ NAMESPACE ExampleClassLib
  
     CLASS OneBeltConveyor1 IMPLEMENTS IConveyor1
        VAR PUBLIC
-          belt : IBelt1;
+          belt : IBelt2;
        END_VAR
  
        METHOD PUBLIC Run

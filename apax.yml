@@ -24,6 +24,7 @@ scripts:
   import-tialib: '"$TIA_INSTALL_PATH\\bin\\Siemens.Simatic.Lang.Library.Importer.exe" -i "$PATH_NAME" -o "$TIA_GLOBAL_LIB_PATH"'
 devDependencies:
   "@ax/sdk": ^2311.0.1
+  "@ax/st-lang-contrib-library-toolbox": ^0.21.1
   # "@ax/sdk": 4.0.12
 dependencies:
   "@ax/system-timer": ^6.0.94
